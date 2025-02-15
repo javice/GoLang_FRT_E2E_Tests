@@ -1,0 +1,252 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reporte HTML de Pruebas E2E en FreeRangeTesters</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            .test { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+            .pass { background-color: #e8f5e9; }
+            .fail { background-color: #ffebee; }
+            .log { background-color: #f5f5f5; padding: 10px; margin-top: 10px; font-family: monospace; }
+            .timestamp { color: #666; font-size: 0.9em; }
+            .duration { color: #666; font-style: italic; }
+            .error { color: red; margin-top: 10px; }
+            .subtest { margin-left: 20px; }
+            .running { color: yellow; }
+        </style>
+    </head>
+    <body>
+        <h1>Reporte HTML de Pruebas E2E en FreeRangeTesters</h1>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:06 home_page_test.go:104: 🚀 Iniciando validación de estructura - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 4.58s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:11 home_page_test.go:114: 🏗 Resultado de la validación: true<br>
+                
+                2025/02/14 21:02:11 home_page_test.go:116: ✅ Test de estructura completado en 4.58<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:17 sandbox_page_test.go:77: 🚀 Iniciando test de cuadro de texto - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 0.91s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:17 sandbox_page_test.go:83: 📝 Valor del Textbox: Texto de prueba<br>
+                
+                2025/02/14 21:02:17 sandbox_page_test.go:84: ✅ Test de cuadro de texto completado en 0.91<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:17 sandbox_page_test.go:88: 🚀 Iniciando test de checkboxes y radio buttons - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 1.95s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:19 sandbox_page_test.go:94: 📝 Valor del primer Checkbox: Pizza 🍕<br>
+                
+                2025/02/14 21:02:19 sandbox_page_test.go:95: 📝 Valor del Radio Button: on<br>
+                
+                2025/02/14 21:02:19 sandbox_page_test.go:96: ✅ Test de checkboxes y radio buttons completado en 1.95<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:23 sandbox_page_test.go:137: 🚀 Iniciando test de tablas - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 0s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:24 sandbox_page_test.go:143: 📝 Valor de la celda dinámica antes: N5<br>
+                
+                2025/02/14 21:02:24 sandbox_page_test.go:144: 📝 Valor de la celda dinámica después: D9<br>
+                
+                2025/02/14 21:02:24 sandbox_page_test.go:145: 📝 Valor de la celda estática antes: Messi<br>
+                
+                2025/02/14 21:02:24 sandbox_page_test.go:146: 📝 Valor de la celda estática luego: Messi<br>
+                
+                2025/02/14 21:02:24 sandbox_page_test.go:149: ✅ Test de tablas completado en 1.25 segundos<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:11 sandbox_page_test.go:65: 🚀 Iniciando test de botón dinámico - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 5.8100000000000005s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:17 sandbox_page_test.go:71: 📝 Valor del Texto oculto: OMG, aparezco después de 3 segundos de haber hecho click en el botón 👻.<br>
+                
+                2025/02/14 21:02:17 sandbox_page_test.go:72: ✅ Test de botón dinámico completado en 5.81<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:19 sandbox_page_test.go:100: 🚀 Iniciando test de dropdowns - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 1.24s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:21 sandbox_page_test.go:106: 📝 Valor del primer Dropdown: Fútbol<br>
+                
+                2025/02/14 21:02:21 sandbox_page_test.go:107: 📝 Valor del segundo Dropdown : Martes<br>
+                
+                2025/02/14 21:02:21 sandbox_page_test.go:108: ✅ Test de dropdowns completado en 1.24<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:21 sandbox_page_test.go:114: 🚀 Iniciando test de popup - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 0s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:22 sandbox_page_test.go:120: 📝 Texto del popup: ¿Viste? ¡Apareció un Pop-up!<br>
+                
+                2025/02/14 21:02:22 sandbox_page_test.go:121: ✅ Test de popup completado en 1.15 segundos<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:01 home_page_test.go:41: 🚀 Iniciando test de Título en FRT - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 1.67s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:01 home_page_test.go:45: 📡 Accediendo a la URL: https://www.freerangetesters.com<br>
+                
+                2025/02/14 21:02:03 home_page_test.go:53: 📝 Título obtenido: Free Range Testers<br>
+                
+                2025/02/14 21:02:03 home_page_test.go:56: ✅ Test de título completado en 1.67<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:03 home_page_test.go:63: 🚀 Iniciando test de secciones - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 1.6099999999999999s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:04 home_page_test.go:74: 📊 Número de secciones encontradas: 16<br>
+                
+                2025/02/14 21:02:04 home_page_test.go:78: ✅ Test de secciones completado en 1.61<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:04 home_page_test.go:83: 🚀 Iniciando test de enlaces - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 1.53s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:06 home_page_test.go:93: 🔗 Número de enlaces encontrados: 10<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 1: https://www.freerangetesters.com/content-assets/public/eyJhbGciOiJIUzI1NiJ9.eyJvYmplY3Rfa2V5IjoiYWNyejJwYmJxYzJhNWg5Z3A2Z2NqM3Nva244NSIsImRvbWFpbiI6Ind3dy5mcmVlcmFuZ2V0ZXN0ZXJzLmNvbSJ9.0tiZ084FQR5olLxWvnDAd_WBPleRri7ZfKcxR7lxHzA<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 2: https://cdn.podia.com/assets/storefront-ac83c06e431b2f7199287234514c1f613ae5d183e03ea4051cf7698352c07c95.css<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 3: https://fonts.googleapis.com/css?family=Fredoka&#43;One:400|Rubik:400|Rubik:300|Rubik:700<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 4: https://www.googletagmanager.com/gtag/js?id=G-MDMB1EDWKT<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 5: https://www.paypalobjects.com/api/checkout.js<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 6: https://embed.cloudflarestream.com/embed/sdk.latest.js<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 7: https://challenges.cloudflare.com/turnstile/v0/api.js<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 8: https://js.stripe.com/v3/<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 9: https://cdn.podia.com/assets/user-site-729eb4244d96529c0db90d8ac52d22e914c1945832db058687fe21e8ef89ff9f.js<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:95:   🌐 Enlace 10: https://cdn.podia.com/assets/storefront-d9c87827ee0142a3c8ba7cdfe80c2347d7591b6c389b99f67135f6485b13f7d4.js<br>
+                
+                2025/02/14 21:02:06 home_page_test.go:99: ✅ Test de enlaces completado en 1.53<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:11 sandbox_page_test.go:24: 🚀 Iniciando test de Título en Sandbox de FRT - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 0.13s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:28: 📡 Accediendo a la URL: https://thefreerangetester.github.io/sandbox-automation-testing/<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:36: 📝 Título obtenido: Automation Sandbox<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:39: ✅ Test de título completado en 0.13<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:11 sandbox_page_test.go:45: 🚀 Iniciando test de enlaces en Sandbox - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 0.03s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:55: 🔗 Número de enlaces encontrados: 5<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:57:   🌐 Enlace 1: /sandbox-automation-testing/favicon.ico<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:57:   🌐 Enlace 2: /sandbox-automation-testing/logo192.png<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:57:   🌐 Enlace 3: /sandbox-automation-testing/manifest.json<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:57:   🌐 Enlace 4: /sandbox-automation-testing/static/css/main.5cd83425.css<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:57:   🌐 Enlace 5: /sandbox-automation-testing/static/js/main.cddc4bb1.js<br>
+                
+                2025/02/14 21:02:11 sandbox_page_test.go:61: ✅ Test de enlaces completado en 0.03<br>
+                
+            </div>
+            
+        </div>
+        
+        <div class="test">
+            <h2>2025/02/14 21:02:22 sandbox_page_test.go:127: 🚀 Iniciando test de Shadow DOM - <span class="✅ pass">✅ PASS</span></h2>
+            <p class="timestamp">Inicio: 2025-02-14 21:02:25</p>
+            <p class="duration">Duración: 0.98s</p>
+            <div class="log">
+                
+                2025/02/14 21:02:23 sandbox_page_test.go:133: ✅ Contenido del Shadow DOM: <br>
+                
+                2025/02/14 21:02:23 sandbox_page_test.go:134: ✅ Test de Shadow DOM completado en 0.98<br>
+                
+            </div>
+            
+        </div>
+        
+    </body>
+    </html>
+    

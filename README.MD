@@ -7,6 +7,7 @@ Este proyecto es un conjunto de pruebas de extremo a extremo (E2E) para FreeRang
 La estructura del proyecto es la siguiente:
 
 ```mermaid
+graph TD;
 ESTRUCTURA DE CARPETAS
 .
 ├── cmd
