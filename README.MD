@@ -85,7 +85,11 @@ El archivo `test-report.html` contiene el informe de pruebas en formato HTML.
 
 ## Contribución
 
-Si deseas contribuir al proyecto, por favor, crea un fork del repositorio y envía una solicitud de pull request con tus cambios o sugerencias.
+Si deseas contribuir al proyecto, por favor:
+
+1. Crea un fork del repositorio
+2. Realiza tus cambios o mejoras
+3. Envía una solicitud de pull request con tus cambios o sugerencias
 
 1. Crea un fork del repositorio
 2. Realiza tus cambios o mejoras
