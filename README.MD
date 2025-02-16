@@ -8,7 +8,13 @@ La estructura del proyecto es la siguiente:
 
 ```mermaid
 graph TD;
-ESTRUCTURA DE CARPETAS
+
+    root[.]
+    root --> cmd
+    root --> pkg
+    root --> tests
+    root --> reports
+
 .
 ├── cmd
 │   ├── generate_report
