@@ -4,49 +4,38 @@ Este proyecto es un conjunto de pruebas de extremo a extremo (E2E) para FreeRang
 
 ## Estructura del proyecto
 
-La estructura del proyecto es la siguiente:
-
-```mermaid
-graph TD;
-    root[.]
-    cmd[cmd/]
-    generate[generate_report/]
-    run[run_tests/]
-    pkg[pkg/]
-    pages[pages/]
-    reports[reports/]
-    tests[tests/]
-    e2e[e2e/]
-    reportsDir[reports/]
-    
-    root --> cmd
-    root --> pkg
-    root --> tests
-    root --> reportsDir
-    root --> makefile[Makefile]
-    root --> gomod[go.mod]
-    root --> gosum[go.sum]
-    root --> readme[README.md]
-    
-    cmd --> generate
-    cmd --> run
-    generate --> mainGenerate[main.go]
-    run --> mainRun[main.go]
-    
-    pkg --> pages
-    pkg --> reportsLib[reports/]
-    
-    pages --> homePage[home_page.go]
-    pages --> sandboxPage[sandbox_page.go]
-    
-    reportsLib --> testReport[test_report.go]
-    
-    tests --> e2e
-    e2e --> homeTest[home_page_test.go]
-    e2e --> sandboxTest[sandbox_page_test.go]
-    
-    reportsDir --> htmlReport[test-report.html]
-    reportsDir --> testLog[test.log]
+```
+GoLang_FRT_E2E_Tests/
+├── cmd/
+│   ├── generate_report/
+│   │   └── main.go
+│   └── run_tests/
+│       └── main.go
+│
+├── pkg/
+│   ├── pages/
+│   │   ├── home_page.go
+│   │   ├── sandbox_page.go
+│   │   └── ...
+│   └── reports/
+│       ├── test_report.go
+│       └── ...
+│
+├── tests/
+│   └── e2e/
+│       ├── home_page_test.go
+│       ├── sandbox_page_test.go
+│       └── ...
+│
+├── reports/
+│   ├── test-report.html
+│   ├── test.log
+│   └── ...
+│
+├── Makefile
+├── go.mod
+├── go.sum
+└── README.md
 ```
 
 ## Directorios principales
