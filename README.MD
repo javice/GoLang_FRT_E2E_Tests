@@ -1,6 +1,13 @@
 # GoLang_FRT_E2E_Tests
 
-Este proyecto es un conjunto de pruebas de extremo a extremo (E2E) para FreeRangeTesters, escritas en Go.
+Este proyecto es un conjunto de pruebas de extremo a extremo (E2E) para FreeRangeTesters
+y avis.es cuyo oobjetivo es probar dichas páginas, escritas en Go.
+
+## Librerías usadas
+
+* [Playwright](https://playwright.dev/)
+* [GoQuery](https://github.com/PuerkitoBio/goquery)
+
 
 ## Estructura del proyecto
 
@@ -16,7 +23,7 @@ GoLang_FRT_E2E_Tests/
 │   ├── pages/
 │   │   ├── home_page.go
 │   │   ├── sandbox_page.go
-│   │   └── ...
+│   │   └── avis_page.go
 │   └── reports/
 │       ├── test_report.go
 │       └── ...
@@ -25,7 +32,7 @@ GoLang_FRT_E2E_Tests/
 │   └── e2e/
 │       ├── home_page_test.go
 │       ├── sandbox_page_test.go
-│       └── ...
+│       └── avis_page_test.go
 │
 ├── reports/
 │   ├── test-report.html
