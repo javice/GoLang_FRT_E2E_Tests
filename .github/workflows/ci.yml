@@ -6,6 +6,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    services:
+      xvfb:
+        image: selenium/standalone-chrome
+        options: --privileged
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -29,7 +34,7 @@ jobs:
         npx playwright install
 
     - name: Run tests and generate report
-      run: make test-report
+      run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test-report
 
     - name: Build package
       run: make build
