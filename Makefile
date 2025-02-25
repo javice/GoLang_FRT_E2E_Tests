@@ -49,7 +49,8 @@ test-report:
 	go clean -testcache
 	# ============ REALIZAMOS TESTS ============
 	@echo "$(CYAN)Ejecutando tests$(RESET)"
-	go test -v -count=1 ./tests/e2e/... 
+	# go test -v -count=1 ./tests/e2e/... 
+	PLAYWRIGHT_BROWSERS_PATH=0 xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' go test -v -count=1 ./tests/e2e/... -args --no-sandbox
 	# ============ GENERAMOS REPORTE ============
 	@echo "$(CYAN)Generando reporte$(RESET)"
 	go run cmd/generate_report/main.go
