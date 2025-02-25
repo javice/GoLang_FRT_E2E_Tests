@@ -26,7 +26,7 @@ jobs:
             go clean
             rm -f bin/GoLang_FRT_E2E_Tests
             rm -f reports/*
-            @mkdir -p reports
+            mkdir -p reports
             go clean -testcache
             go test -v -count=1 ./tests/e2e/home_page_test.go
             go test -v -count=1 ./tests/e2e/sandbox_page_test.go
