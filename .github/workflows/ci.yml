@@ -28,9 +28,6 @@ jobs:
         npm install -D playwright@1.50.1
         npx playwright install
 
-    - name: Run tests 
-      run: make test
-    
     - name: Run tests and generate report
       run: make test-report
 
