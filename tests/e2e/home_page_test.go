@@ -77,7 +77,7 @@ func verificarEnlaces(page *pages.HomePage, t *testing.T) {
 		t.Errorf("❌ Error obteniendo enlaces: %v", err)
 		return
 	}else{
-		if assert.Len(t, enlaces, expectedLinksCount, "❌ Número de enlaces no coincide: %s", enlaces) {
+		if assert.Len(t, enlaces, expectedLinksCount, "❌ Número de enlaces no coincide: %d", len(enlaces)) {
 			logger.Printf("🔗 Número de enlaces encontrados: %d", len(enlaces))
 			for i, enlace := range enlaces {
 				logger.Printf("  🌐 Enlace %d: %s", i+1, enlace)
