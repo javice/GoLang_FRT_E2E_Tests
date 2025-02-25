@@ -24,7 +24,9 @@ jobs:
       run: make install
     
     - name: Install Playwright
-      run: npm install -D playwright@1.50.1
+      run: |
+        npm install -D playwright@1.50.1
+        npx playwright install
 
     - name: Run tests 
       run: make test
