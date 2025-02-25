@@ -6,11 +6,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      xvfb:
-        image: selenium/standalone-chrome
-        options: --privileged
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -19,6 +14,14 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: '1.23'
+
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+        google-chrome --version
 
     - name: Install dependencies
       run: make install
@@ -34,7 +37,7 @@ jobs:
     - name: Run tests and generate report
       env:
         PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-        PLAYWRIGHT_CHROMIUM_ARGS: '--no-sandbox'
+        PLAYWRIGHT_BROWSERS_PATH: 0
       run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test-report
 
     - name: Build package
