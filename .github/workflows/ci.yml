@@ -17,6 +17,10 @@ jobs:
 
     - name: Install dependencies
       run: make install
+    
+    - name: Install Playwright
+      run: |
+        npm install -g playwright@1.50.1
 
     - name: Run tests 
       run: make test
