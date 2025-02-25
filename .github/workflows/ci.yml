@@ -15,27 +15,20 @@ jobs:
       with:
         go-version: '1.23'
 
-    - name: Install Chrome
+    - name: Install Chromium
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget unzip
-        wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
-        google-chrome --version
+        sudo apt-get install -y chromium-browser
 
-    - name: Install dependencies
-      run: make install
-
-    - name: Install Playwright drivers
+    - name: Run Chromium
       run: |
+        chromium-browser --headless --disable-gpu --remote-debugging-port=9222
+
+    - name: Install dependencies and Playwright
+      run: |
+        make install
         go install github.com/playwright-community/playwright-go/cmd/playwright@latest
         playwright install --with-deps
-
-    - name: Verify Playwright installation
-      run: playwright --version
-
-    - name: Install Playwright browsers
-      run: playwright install
 
     - name: Run tests and generate report
       run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test-report
