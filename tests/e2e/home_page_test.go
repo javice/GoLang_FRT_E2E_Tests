@@ -15,7 +15,7 @@ import (
 const (
 	expectedTitle         = "Free Range Testers"
 	expectedSectionsCount = 16
-	expectedLinksCount    = 10
+	expectedLinksCount    = 63
 )
 
 var logger *log.Logger
