@@ -34,7 +34,7 @@ jobs:
     - name: Run tests and generate report
       env:
         PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-      run: make test-report
+      run: xvfb-run --auto-servernum --no-sandbox --server-args='-screen 0 1920x1080x24' make test-report
 
     - name: Build package
       run: make build
