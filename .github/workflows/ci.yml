@@ -28,9 +28,7 @@ jobs:
 
     
     - name: Install Playwright
-      run: |
-        npm install -D playwright@latest
-        npx playwright install
+      run: npm init playwright@latest
 
     - name: Verify Playwright installation
       run: npx playwright --version
