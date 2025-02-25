@@ -20,21 +20,16 @@ jobs:
       with:
         go-version: '1.23'
         
-    - name: Install Node.js and npm
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
     - name: Install dependencies
       run: make install
     
-    - name: Install Playwright
+    - name: Install Playwright drivers
       run: |
-        npm install -D playwright@1.50.1
-        npx playwright install --with-deps
+        go install github.com/playwright-community/playwright-go/cmd/playwright@latest
+        playwright install --with-deps
 
     - name: Verify Playwright installation
-      run: npx playwright --version
+      run: playwright --version
 
     - name: Run tests and generate report
       run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test-report
