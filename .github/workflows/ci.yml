@@ -19,10 +19,10 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: '1.23'
-        
+
     - name: Install dependencies
       run: make install
-    
+
     - name: Install Playwright drivers
       run: |
         go install github.com/playwright-community/playwright-go/cmd/playwright@latest
@@ -32,6 +32,8 @@ jobs:
       run: playwright --version
 
     - name: Run tests and generate report
+      env:
+        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
       run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test-report
 
     - name: Build package

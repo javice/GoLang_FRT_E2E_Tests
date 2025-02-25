@@ -35,7 +35,8 @@ test:
 	go clean -testcache
 	@echo "$(CYAN)Ejecutando tests$(RESET)"
 	# go test -v ./...
-	go test -v -count=1 ./tests/e2e/... 
+	# go test -v -count=1 ./tests/e2e/... 
+	PLAYWRIGHT_BROWSERS_PATH=0 xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' go test -v -count=1 ./tests/e2e/... -args --no-sandbox
 
 test-report:
 	# ============ LIMPIAMOS EL DIRECTORIO DE REPORTES ============
