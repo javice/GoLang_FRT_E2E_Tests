@@ -19,17 +19,23 @@ RESET=\033[0m
 
 
 # Comandos
-.PHONY: all build test clean run lint report
+.PHONY: all build test clean run lint report install
 
 all: clean lint test build
+
+install:
+	go mod tidy
 
 build:
 	@echo "$(CYAN)Compilando $(BINARY_NAME)$(RESET)"
 	go build -o bin/$(BINARY_NAME) $(MAIN_PACKAGE)
 
 test:
+	@echo "$(CYAN)Limpiando cache de tests$(RESET)"
+	go clean -testcache
 	@echo "$(CYAN)Ejecutando tests$(RESET)"
-	go test -v ./...
+	# go test -v ./...
+	go test -v -count=1 ./tests/e2e/... 
 
 test-report:
 	# ============ LIMPIAMOS EL DIRECTORIO DE REPORTES ============
@@ -37,8 +43,8 @@ test-report:
 	go clean
 	rm -f bin/$(BINARY_NAME)
 	rm -f $(TEST_REPORT_DIR)/*
-	# ============ LIMPIAMOS CACHE ============
 	@mkdir -p $(TEST_REPORT_DIR)
+	# ============ LIMPIAMOS CACHE ============
 	@echo "$(CYAN)Limpiando cache de tests$(RESET)"
 	go clean -testcache
 	# ============ REALIZAMOS TESTS ============
