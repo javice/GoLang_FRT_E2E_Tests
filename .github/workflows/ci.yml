@@ -27,10 +27,7 @@ jobs:
       run: make install
 
     - name: Install Playwright
-      run: npx playwright install --with-deps
-
-    - name: Verify Playwright installation
-      run: npx playwright --version
+      run: playwright install --with-deps
 
     - name: Run tests and generate report
       run: make test-report
