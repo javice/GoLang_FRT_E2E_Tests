@@ -18,19 +18,19 @@ jobs:
     - name: Download Go dependencies
       run: go mod download
         
-    - name: Install Node.js and npm
-      uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        
     - name: Install dependencies
       run: make install
-
-    - name: Install Playwright
-      run: playwright install --with-deps
-
+    
     - name: Run tests and generate report
-      run: make test-report
-
+      run: |
+            go clean
+            rm -f bin/GoLang_FRT_E2E_Tests
+            rm -f reports/*
+            @mkdir -p reports
+            go clean -testcache
+            go test -v -count=1 ./tests/e2e/home_page_test.go
+            go test -v -count=1 ./tests/e2e/sandbox_page_test.go
+            go run cmd/generate_report/main.go
+            
     - name: Build package
       run: make build
