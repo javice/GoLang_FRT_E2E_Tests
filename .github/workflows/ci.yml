@@ -19,16 +19,18 @@ jobs:
       run: go mod download
         
     - name: Install Node.js and npm
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: '22.14.0'
-
+        node-version: lts/*
+        
     - name: Install dependencies
       run: make install
 
-    
+    - name: Install node dependencies
+      run: npm ci
+
     - name: Install Playwright
-      run: npm init playwright@latest
+      run: npx playwright install --with-deps
 
     - name: Verify Playwright installation
       run: npx playwright --version
