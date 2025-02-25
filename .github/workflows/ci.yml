@@ -33,6 +33,9 @@ jobs:
         npm install -D playwright@1.50.1
         npx playwright install --with-deps
 
+    - name: Verify Playwright installation
+      run: npx playwright --version
+
     - name: Run tests and generate report
       run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test-report
 
